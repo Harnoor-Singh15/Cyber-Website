@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools | Harnoor Singh</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { background: #050505; color: white; font-family: 'Roboto'; padding-top: 90px; }
+    .navbar { background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); }
+    .navbar-brand { font-family: 'Orbitron'; color: #00eaff !important; text-shadow: 0 0 10px #00eaff; }
+    .nav-link { color: #ccc !important; transition: .3s; }
+    .nav-link:hover { color: #00eaff !important; text-shadow: 0 0 10px #00eaff; }
+
+    .tool { margin-bottom: 40px; animation: fadeIn 2s ease; }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
+    .tool h2 { color: #00eaff; text-shadow: 0 0 15px #00eaff; }
+    .command {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #00eaff;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 10px 0;
+      transition: 0.4s;
+    }
+    .command:hover { box-shadow: 0 0 25px #00eaff, inset 0 0 10px #00eaff; transform: scale(1.02); }
+    footer { text-align: center; padding: 20px; color: #888; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Harnoor Singh</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="content.html">Content</a></li>
+          <li class="nav-item"><a class="nav-link" href="why.html">Why Choose Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="tool">
+      <h2>🕵️ Nmap (Network Mapper)</h2>
+      <p>Nmap is a powerful network scanning tool used to discover hosts, open ports, services, and vulnerabilities.</p>
+      <div class="command"><b>Basic Scan:</b> <code>nmap 192.168.1.1</code></div>
+      <div class="command"><b>Scan Multiple IPs:</b> <code>nmap 192.168.1.1 192.168.1.2</code></div>
+      <div class="command"><b>Service Detection:</b> <code>nmap -sV target.com</code></div>
+      <div class="command"><b>OS Detection:</b> <code>nmap -O target.com</code></div>
+      <div class="command"><b>Full Port Scan:</b> <code>nmap -p- target.com</code></div>
+    </div>
+
+    <div class="tool">
+      <h2>💡 Burp Suite Community Edition</h2>
+      <p>Burp Suite is used for web application testing. The community edition provides tools like Proxy, Repeater, and Decoder.</p>
+      <div class="command"><b>Proxy:</b> Intercept requests between browser & server.</div>
+      <div class="command"><b>Repeater:</b> Resend and modify HTTP requests manually.</div>
+      <div class="command"><b>Decoder:</b> Encode or decode data (Base64, URL, etc.).</div>
+      <div class="command"><b>Comparer:</b> Compare two HTTP responses to find differences.</div>
+    </div>
+  </div>
+
+  <footer>© Copyright by Harnoor Singh</footer>
+</body>
+</html>

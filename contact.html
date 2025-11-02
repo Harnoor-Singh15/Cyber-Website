@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Cybersecurity by Harnoor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #000, #0a1b2a);
+      color: #fff;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+      backdrop-filter: blur(5px);
+    }
+    .contact-form input, .contact-form textarea {
+      background: transparent;
+      border: 1px solid cyan;
+      color: white;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      box-shadow: 0 0 10px cyan;
+      border-color: cyan;
+    }
+    .btn-send {
+      background: cyan;
+      color: #000;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-send:hover {
+      background: #00ffff;
+      box-shadow: 0 0 20px cyan;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5 text-center">
+    <h1 class="glow-text mb-4">Contact Me</h1>
+    <div class="contact-form text-start">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-send px-4 py-2">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
