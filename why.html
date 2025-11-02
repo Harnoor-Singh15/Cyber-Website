@@ -22,3 +22,34 @@
     </div>
   </div>
 </section>
+<style>
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+  50% { text-shadow: 0 0 25px #00ffff, 0 0 40px #00ffff; }
+}
+
+.animate-pulse-glow {
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.2s; }
+.delay-200 { animation-delay: 0.4s; }
+</style>
+
+</body>
+</html>
