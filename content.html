@@ -2,201 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools | Harnoor Singh</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Cybersecurity Tools | Harnoor Singh</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { background: #050505; color: white; font-family: 'Roboto'; }
-    /* --- CYBER NAVBAR STYLE --- */
-.cyber-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  background: rgba(10, 25, 47, 0.95);
-  box-shadow: 0 0 20px #00ffffa6;
-  border-bottom: 1px solid #00ffff60;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.glow {
-  color: #fff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  animation: pulseGlow 3s infinite ease-in-out;
-}
-
-/* --- Navbar Links --- */
-.nav-links {
-  display: flex;
-  gap: 35px;
-  transition: all 0.5s ease;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -5px;
-  background: #00ffff;
-  transition: width 0.4s;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-/* --- Neon Animation --- */
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  }
-  50% {
-    text-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff, 0 0 60px #00ccff;
-  }
-}
-
-/* --- Mobile Navbar --- */
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 6px;
-}
-
-.menu-icon span {
-  width: 28px;
-  height: 3px;
-  background: #00ffff;
-  transition: all 0.4s;
-}
-
-@media (max-width: 900px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 20, 40, 0.95);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    text-align: right;
-    padding: 20px;
-    box-shadow: 0 0 20px #00ffff80;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-
-  .menu-icon.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
-  }
-  .menu-icon.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-icon.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
-  }
-}
-
-    .tool { margin-bottom: 40px; animation: fadeIn 2s ease; }
-    @keyframes fadeIn { from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);} }
-    .tool h2 { color: #00eaff; text-shadow: 0 0 15px #00eaff; }
-    .command {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid #00eaff;
-      border-radius: 15px;
-      padding: 15px;
-      margin: 10px 0;
-      transition: 0.4s;
+    /* --- Content Page Styling --- */
+    .content-section {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #00111f, #000);
+      padding: 100px 30px;
+      color: #fff;
     }
-    .command:hover { box-shadow: 0 0 25px #00eaff, inset 0 0 10px #00eaff; transform: scale(1.02); }
-    footer { text-align: center; padding: 20px; color: #888; }
+
+    .tool {
+      background: rgba(0, 30, 50, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ffff60;
+      margin-bottom: 60px;
+      padding: 30px;
+      transition: all 0.4s ease;
+    }
+
+    .tool:hover {
+      box-shadow: 0 0 35px #00ffff, 0 0 70px #00ffff;
+      transform: translateY(-5px);
+    }
+
+    .tool h2 {
+      color: #00ffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .commands {
+      margin-top: 20px;
+    }
+
+    .command-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffff80;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .command-box:hover {
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .command {
+      color: #00ffff;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background: rgba(0, 20, 40, 0.9);
+      color: #00ffff;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 80px 15px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- 🌌 FUTURISTIC CYBER NAVBAR 🌌 -->
-<header class="cyber-navbar">
-  <div class="logo">
-    <span class="glow">⚡ Harnoor Singh</span>
-  </div>
-  <nav class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="content.html">Content</a>
-    <a href="why.html">Why Choose Us</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="menu-icon" id="menuIcon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
+  <!-- Navbar -->
+  <header class="cyber-navbar">
+    <div class="logo">
+      <span class="glow">⚡ Harnoor Singh</span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="content.html" class="active">Content</a>
+      <a href="why.html">Why Choose Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-icon" id="menuIcon">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
 
-<script>
-  // 🔹 Navbar Toggle for Mobile
-  const menuIcon = document.getElementById("menuIcon");
-  const navLinks = document.getElementById("navLinks");
-  menuIcon.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menuIcon.classList.toggle("open");
-  });
-</script>
+  <!-- Content -->
+  <section class="content-section">
+    <h1 class="neon" style="text-align:center; margin-bottom:50px;">Cybersecurity Tools</h1>
 
-  <div class="container">
+    <!-- Nmap Tool -->
     <div class="tool">
-      <h2>🕵️ Nmap (Network Mapper)</h2>
-      <p>Nmap is a powerful network scanning tool used to discover hosts, open ports, services, and vulnerabilities.</p>
-      <div class="command"><b>Basic Scan:</b> <code>nmap 192.168.1.1</code></div>
-      <div class="command"><b>Scan Multiple IPs:</b> <code>nmap 192.168.1.1 192.168.1.2</code></div>
-      <div class="command"><b>Service Detection:</b> <code>nmap -sV target.com</code></div>
-      <div class="command"><b>OS Detection:</b> <code>nmap -O target.com</code></div>
-      <div class="command"><b>Full Port Scan:</b> <code>nmap -p- target.com</code></div>
+      <h2>Nmap (Network Mapper)</h2>
+      <p>Nmap is a network scanning tool used to discover hosts, open ports, services, and vulnerabilities. It’s a must-have for reconnaissance in cybersecurity.</p>
+
+      <div class="commands">
+        <div class="command-box">
+          <p class="command">nmap 192.168.1.1</p>
+          <p>Scans a single IP address for open ports.</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">nmap -sS 192.168.1.1</p>
+          <p>Performs a stealth SYN scan (used to avoid detection).</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">nmap -A 192.168.1.1</p>
+          <p>Performs an aggressive scan (OS detection, version, and script scan).</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">nmap -p 1-65535 192.168.1.1</p>
+          <p>Scans all 65,535 ports on the target host.</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">nmap -sV -sC 192.168.1.1</p>
+          <p>Detects service versions and runs default scripts on the target.</p>
+        </div>
+      </div>
     </div>
 
+    <!-- Burp Suite Tool -->
     <div class="tool">
-      <h2>💡 Burp Suite Community Edition</h2>
-      <p>Burp Suite is used for web application testing. The community edition provides tools like Proxy, Repeater, and Decoder.</p>
-      <div class="command"><b>Proxy:</b> Intercept requests between browser & server.</div>
-      <div class="command"><b>Repeater:</b> Resend and modify HTTP requests manually.</div>
-      <div class="command"><b>Decoder:</b> Encode or decode data (Base64, URL, etc.).</div>
-      <div class="command"><b>Comparer:</b> Compare two HTTP responses to find differences.</div>
-    </div>
-  </div>
+      <h2>Burp Suite (Community Edition)</h2>
+      <p>Burp Suite is an integrated platform for web application security testing. The community edition is perfect for beginners to analyze requests and responses.</p>
 
-  <footer>© Copyright by Harnoor Singh</footer>
+      <div class="commands">
+        <div class="command-box">
+          <p class="command">Proxy → Intercept → ON</p>
+          <p>Captures HTTP/S requests for manual inspection and modification.</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">Target → Site Map</p>
+          <p>Displays the complete structure of the target website for mapping vulnerabilities.</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">Repeater Tool</p>
+          <p>Allows you to resend modified requests to test different inputs and responses.</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">Intruder (Community Mode)</p>
+          <p>Used to send multiple payloads automatically (limited speed in free version).</p>
+        </div>
+
+        <div class="command-box">
+          <p class="command">Decoder & Comparer</p>
+          <p>Helps to decode, encode, and compare different pieces of data during testing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Copyright by Harnoor Singh</p>
+  </footer>
+
+  <script>
+    // Navbar toggle for mobile
+    const menuIcon = document.getElementById("menuIcon");
+    const navLinks = document.getElementById("navLinks");
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuIcon.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>
-
-
