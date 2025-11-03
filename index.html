@@ -2,167 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harnoor Singh | Cybersecurity</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      color: white;
-      background: radial-gradient(circle at top, #0a0a0a 0%, #050505 100%);
-      overflow-x: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(8px);
-    }
-    .navbar-brand {
-      font-family: 'Orbitron', sans-serif;
-      color: #00eaff !important;
-      font-weight: bold;
-      text-shadow: 0 0 10px #00eaff;
-    }
-    .nav-link {
-      color: #ccc !important;
-      margin: 0 10px;
-      transition: 0.3s;
-    }
-    .nav-link:hover {
-      color: #00eaff !important;
-      text-shadow: 0 0 10px #00eaff;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    /* Animated Background */
-    .bg-anim {
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 180deg, #00eaff, #a200ff, #00eaff);
-      animation: rotate 10s linear infinite;
-      filter: blur(200px);
-      opacity: 0.3;
-    }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      animation: fadeInUp 2s ease-in-out;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #00eaff;
-      text-shadow: 0 0 15px #00eaff;
-    }
-
-    p {
-      color: #bbb;
-      font-size: 1.2rem;
-      margin-top: 15px;
-    }
-
-    .btn-glow {
-      margin: 15px;
-      padding: 10px 25px;
-      border: 2px solid #00eaff;
-      border-radius: 25px;
-      background: transparent;
-      color: #00eaff;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-
-    .btn-glow:hover {
-      background: #00eaff;
-      color: #000;
-      box-shadow: 0 0 20px #00eaff, 0 0 50px #00eaff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.7);
-      color: #888;
-      font-size: 0.9rem;
-      position: relative;
-      z-index: 2;
-    }
-  </style>
+  <title>Harnoor Singh | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Harnoor Singh</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="content.html">Content</a></li>
-          <li class="nav-item"><a class="nav-link" href="why.html">Why Choose Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+  <!-- 🌌 Futuristic Navbar -->
+  <header class="cyber-navbar">
+    <div class="logo">
+      <span class="glow">⚡ Harnoor Singh</span>
     </div>
-  </nav>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="content.html">Content</a>
+      <a href="why.html">Why Choose Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-icon" id="menuIcon">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
 
-  <!-- Hero Section -->
+  <!-- 🔥 Hero Section -->
   <section class="hero">
-    <div class="bg-anim"></div>
-    <div class="hero-content">
-      <h1>Welcome to My Cybersecurity World 🔐</h1>
-      <p>Exploring networks, tools, and digital defense with passion.</p>
-      <div>
-        <a href="about.html" class="btn-glow">About Me</a>
-        <a href="content.html" class="btn-glow">Explore Tools</a>
-        <a href="why.html" class="btn-glow">Why Choose Us</a>
-        <a href="contact.html" class="btn-glow">Contact</a>
-      </div>
+    <div class="hero-text">
+      <h1 class="animate-text">Welcome to <span class="neon">CyberSpace</span></h1>
+      <p class="animate-text">I’m <strong>Harnoor Singh</strong>, an 18-year-old cybersecurity enthusiast — exploring vulnerabilities, tools, and ethical hacking.</p>
+      <a href="content.html" class="btn">Explore Tools</a>
     </div>
   </section>
 
+  <!-- ⚡ Footer -->
   <footer>
-    © Copyright by Harnoor Singh
+    <p>© Copyright by Harnoor Singh</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile menu animation
+    const menuIcon = document.getElementById("menuIcon");
+    const navLinks = document.getElementById("navLinks");
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuIcon.classList.toggle("open");
+    });
+  </script>
+  
 </body>
 </html>
